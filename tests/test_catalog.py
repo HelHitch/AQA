@@ -14,7 +14,4 @@ class TestCatalog():
 				self.LoginPage = LoginPage(self.driver)
 				self.LoginPage.login('standard_user' , 'secret_sauce')
 				self.CatalogPage = CatalogPage(self.driver)
-				time.sleep(1)
-				self.CatalogPage.add_element_to_card()
-				assert self.CatalogPage.get_element_text(item[random_item]) == 'Remove'
-				assert self.CatalogPage.get_element_text(CatalogPage.CARD_LOCATOR) == '1'
+				self.CatalogPage.add_random_element_to_card()

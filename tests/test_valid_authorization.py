@@ -7,6 +7,10 @@ from locators.login_page import *
 
 class Test_Auth():
 
+		def __init__(self, driver):
+				super().__init__(driver)
+
+
 		@pytest.mark.parametrize("username, password" , [('standard_user' , 'secret_sauce')])
 		def test_valid_data_auth(self , init_parameters , username , password):
 				self.LoginPage = LoginPage(self.driver)

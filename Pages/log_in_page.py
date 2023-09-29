@@ -12,9 +12,9 @@ class LoginPage(BasePage):
 		LOG_IN_BUTTON = (By.ID , "login-button")
 		ASSERTION_MESSAGES = (By.XPATH , '//div[3]/h3')
 
-		def __init__(self, driver, url = URL ):
-				super().__init__(driver, url)
-				self.driver.get(url)
+		def __init__(self, driver):
+				super().__init__(driver, url = self.URL)
+				self.driver.get(self.URL)
 
 		"""Paste data into form and authorize"""
 		def login(self, username, password):
