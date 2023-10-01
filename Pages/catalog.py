@@ -19,7 +19,7 @@ class CatalogPage(BasePage):
 				self.click(self.ITEM_LOCATOR)
 
 		def add_random_element_to_card(self):
-				assert 'remove' in self.click_random_element_from_list(self.ITEM_LOCATOR)
+				assert 'Remove' in self.click_random_element_from_list(self.ITEM_LOCATOR)
 				assert self.get_element_text(self.CARD_LOCATOR) == '1'
 
 
