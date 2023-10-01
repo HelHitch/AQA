@@ -4,10 +4,8 @@ import pytest
 from selenium import webdriver
 
 
-@pytest.fixture(params = ["chrome"], scope = 'class')
+@pytest.fixture(scope='class')
 def init_parameters(request):
-		if request.param == "chrome":
-				web_driver = webdriver.Chrome()
-		request.cls.driver = web_driver
-		yield
-		web_driver.close()
+    web_driver = webdriver.Chrome()
+    yield web_driver
+    web_driver.close()
