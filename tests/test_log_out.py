@@ -2,7 +2,7 @@ from Pages.log_in_page import LoginPage
 from Pages.sidebar import SideBar
 
 
-class Test_LogOut:
+class TestLogOut:
     def __init__(self, driver):
         super().__init__(driver)
         self.LogInPage = LoginPage(self)
