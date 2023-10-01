@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from Pages.BasePage import BasePage
 
 
@@ -8,6 +10,6 @@ class SideBar(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
-    def choose_sidebar_element(self):
+    def choose_sidebar_element(self, by_element):
         self.click(self.BURGER_MENU)
-        self.click(self.LOG_OUT_BTN)
+        self.click(by_element)

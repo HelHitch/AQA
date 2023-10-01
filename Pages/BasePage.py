@@ -39,8 +39,7 @@ class BasePage:
 				print(element.text)
 				return element.text
 
-		def check_presence_of_an_element(self , by_locator):
-				element = WebDriverWait(self.driver , 10).until(EC.visibility_of_element_located(by_locator))
-				return element
-
+		def element_is_visible(self, by_locator):
+			element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
+			return element
 
