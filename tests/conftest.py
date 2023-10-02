@@ -12,7 +12,10 @@ def init_parameters():
 
 
 @pytest.fixture(scope='class')
-def completed_auth(init_parameters):
+def completed_auth(request, init_parameters):
     CatalogPage = LoginPage(init_parameters)
-    yield CatalogPage.login(username='standard_user', password='secret_sauce')
+    CatalogPage = CatalogPage.login(username='standard_user', password='secret_sauce')
+    print('Into fixture')
+    yield CatalogPage
+
 
