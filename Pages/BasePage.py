@@ -13,8 +13,8 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
 
-    def open_page(self, url, **kwargs):
-        page = self.driver.get(url, **kwargs)
+    def open_page(self, url):
+        page = self.driver.get(url)
         return page
 
     def click(self, by_locator):

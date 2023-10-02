@@ -4,13 +4,13 @@ import pytest
 
 from Pages.log_in import LoginPage
 from Pages.catalog import CatalogPage
-from data.auth_data import return_valid_auth_data, return_invalid_auth_data, return_not_existing_data
+from data.auth_data import return_valid_auth_data, return_not_existing_data
 from Pages import BasePage
 from tests.conftest import init_parameters
 
 class TestAuth:
 
-    def test_valid_data_auth(self, init_parameters, username, password):
+    def test_valid_data_auth(self, init_parameters):
         self.LoginPage = LoginPage(init_parameters)
         self.CatalogPage = CatalogPage(init_parameters)
         auth = return_valid_auth_data()
