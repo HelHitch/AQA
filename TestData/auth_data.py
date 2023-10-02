@@ -1,16 +1,16 @@
 import dataclasses
-import random
 
+
+"""В этом файле хранятся входные данные для проверок"""
 
 @dataclasses.dataclass
 class LogInParameters:
     login: str = None
     password: str = None
 
-
 def return_valid_auth_data():
     return LogInParameters(
-        login='standard_user1',
+        login='standard_user',
         password='secret_sauce'
     )
 

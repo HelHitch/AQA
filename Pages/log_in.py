@@ -1,7 +1,6 @@
 from Pages.BasePage import BasePage
 from selenium.webdriver.common.by import By
 
-
 class LoginPage(BasePage):
     URL = "https://www.saucedemo.com/"
 
