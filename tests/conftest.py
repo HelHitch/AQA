@@ -10,7 +10,7 @@ def init_parameters():
     web_driver = webdriver.Chrome()
     yield web_driver
     web_driver.close()
-
+    web_driver.quit()
 
 
 @pytest.fixture(scope='class')
