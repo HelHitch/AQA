@@ -24,6 +24,7 @@
 
 
 ## Make Allure report:
+    Type below command into your IDE console after launching progect. 
     For first launch:
     - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
     - irm get.scoop.sh | iex
