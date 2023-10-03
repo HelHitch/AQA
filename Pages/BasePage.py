@@ -49,7 +49,7 @@ class BasePage:
         except TimeoutException:
             raise TimeoutException('Failed getting element text')
 
-    @allure.step('Check that element is visible')
+    @allure.step('Check that needed element is visible')
     def element_is_visible(self, by_locator):
         try:
             element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))

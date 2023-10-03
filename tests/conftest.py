@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 # -- coding: utf-8 --
+import subprocess
+import allure
 import pytest
+from pathlib import Path
 from selenium import webdriver
 from Pages.log_in import LoginPage
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
+from shutil import rmtree
 
 
 
@@ -23,7 +27,6 @@ def headless(request):
 @pytest.fixture()
 def init_parameters(browser, headless):
 		if headless == "true":
-
 				if browser == "chrome":
 						options = webdriver.ChromeOptions()
 						options.add_argument("--headless=new")
@@ -40,8 +43,10 @@ def init_parameters(browser, headless):
 						driver = webdriver.Firefox(service = FirefoxService(GeckoDriverManager().install()))
 
 		yield driver
+		subprocess.run(["allure serve report"] , shell = True)
 		driver.close()
 		driver.quit()
+
 
 
 def pytest_addoption(parser):

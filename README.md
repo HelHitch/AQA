@@ -11,7 +11,7 @@
      pip install -r requirements.txt --no-cache-dir
 
 ## Install Java packages, add PATH variable to java:  
-- [download](https://www.java.com/en/download/help/download_options.html)
+- [download](https://learn.microsoft.com/en-us/java/openjdk/download)
 
      
 ## Initialize venv:
