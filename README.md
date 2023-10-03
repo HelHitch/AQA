@@ -1,5 +1,9 @@
 # AQA
 
+## Install Chrome and Firefox:
+- [Chrome](https://www.google.com/intl/ru_ru/chrome/)
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+  
 ## Install Python version 3.11:
 - [download](https://www.python.org/downloads/) 
      
@@ -24,12 +28,13 @@
 
 
 ## Make Allure report:
-    PowerShell for project directory:
+    Type below command into your IDE console after launching progect. 
+    For first launch:
     - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
     - irm get.scoop.sh | iex
-    IDE Concole:
-    - pytest --alluredir=/path/to/allure_results 
-    - allure serve /path/to/my_allure_reports
+    Getting report:
+    - pytest --alluredir=report
+    - allure serve report
     
     
     
