@@ -1,7 +1,7 @@
 import time
 
 import pytest
-
+import allure
 from Pages.log_in import LoginPage
 from Pages.catalog import CatalogPage
 from TestData.auth_data import return_valid_auth_data, return_not_existing_data
@@ -25,18 +25,16 @@ class TestAuth:
                                                  ('standard_user', ''),
                                                  ('', ''),
                                                  ('abc', '123'),
-                                                 ('blocked_out_user', 'standard_user')])
+                                                 ('locked_out_user', 'secret_sauce')])
     def test_invalid_data_auth(self, init_parameters, login, password):
         self.LoginPage = LoginPage(init_parameters)
         self.CatalogPage = CatalogPage(init_parameters)
         self.LoginPage.login(login, password)
-        time.sleep(2)
 
         # Empty login
         if len(login) == 0:
             assert self.LoginPage.get_element_text(
                 self.LoginPage.ASSERTION_MESSAGES) == "Epic sadface: Username is required"
-
 
         # Empty password
         elif len(password) == 0:
@@ -44,7 +42,7 @@ class TestAuth:
                 self.LoginPage.ASSERTION_MESSAGES) == "Epic sadface: Password is required"
 
         # Blocked user
-        elif login == 'blocked_out_user' and len(password) != 0:
+        elif login == 'locked_out_user' and len(password) != 0:
             assert self.LoginPage.get_element_text(
                 self.LoginPage.ASSERTION_MESSAGES) == "Epic sadface: Sorry, this user has been locked out."
 

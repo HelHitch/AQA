@@ -7,13 +7,28 @@
      git clone https://github.com/HelHitch/AQA.git
 
 ## Install Python packages:
-###  Install requirements to run tests:<h4>
+###  Install requirements to run tests:
      pip install -r requirements.txt --no-cache-dir
+
+##Install Java packages, add PATH variable to java:  
+     [download](https://www.java.com/en/download/help/download_options.html)
+
      
-## Initilize venv:
+## Initialize venv:
      python3 -m venv venv
 
 ## Run tests locally (from directory tests):
      pytest -m marker --browser browser name
  -m = tests matkers. Read markers description in pytest.ini  
  --browser = browser configuration. Read possible parameters in coftest parameters_init
+
+
+##Make Allure report:
+    PowerShell for project directory:
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+    irm get.scoop.sh | iex
+    pytest --alluredir=/path/to/allure_results 
+    allure serve /path/to/my_allure_reports
+    
+    
+    
