@@ -26,6 +26,7 @@ def headless(request):
 
 @pytest.fixture()
 def init_parameters(browser, headless):
+
 		if headless == "true":
 				if browser == "chrome":
 						options = webdriver.ChromeOptions()
@@ -43,9 +44,9 @@ def init_parameters(browser, headless):
 						driver = webdriver.Firefox(service = FirefoxService(GeckoDriverManager().install()))
 
 		yield driver
-		subprocess.run(["allure serve report"] , shell = True)
 		driver.close()
 		driver.quit()
+
 
 
 

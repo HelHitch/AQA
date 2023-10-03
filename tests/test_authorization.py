@@ -13,7 +13,6 @@ from tests.conftest import init_parameters
 class TestAuth:
 
     @pytest.mark.smoke
-    @pytest.mark.valid
     @allure.step(f"Verify that user with valid input parameters can login into system")
     def test_valid_data_auth(self, init_parameters):
         self.LoginPage = LoginPage(init_parameters)
