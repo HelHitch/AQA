@@ -10,10 +10,10 @@ from tests.conftest import init_parameters
 
 
 @pytest.mark.auth
-class TestAuth:
+class TestLogin:
 
     @pytest.mark.smoke
-    @allure.step(f"Verify that user with valid input parameters can login into system")
+    @allure.feature(f"User with valid input parameters can login into system")
     def test_valid_data_auth(self, init_parameters):
         self.LoginPage = LoginPage(init_parameters)
         auth = return_valid_auth_data()
@@ -28,7 +28,7 @@ class TestAuth:
                                                  ('abc', '123'),
                                                  ('locked_out_user', 'secret_sauce')])
 
-    @allure.step(f"Verify that user with invalid input parameters can't login into system")
+    @allure.feature(f"User with invalid input parameters can't login into system")
     def test_invalid_data_auth(self, init_parameters, login, password):
         self.LoginPage = LoginPage(init_parameters)
         self.CatalogPage = CatalogPage(init_parameters)

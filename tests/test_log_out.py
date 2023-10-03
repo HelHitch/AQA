@@ -13,7 +13,7 @@ from TestData.auth_data import return_valid_auth_data
 @pytest.mark.auth
 class TestLogOut:
 
-    @allure.step(f"Verify that user can log out from the system")
+    @allure.feature(f"User can log out from the system")
     @pytest.mark.smoke
     def test_log_out(self,  init_parameters, completed_auth):
         self.SideBar = SideBar(init_parameters)
