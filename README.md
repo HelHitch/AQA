@@ -1,5 +1,9 @@
 # AQA
 
+## Install Chrome and Firefox:
+- [Chrome](https://www.google.com/intl/ru_ru/chrome/)
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+  
 ## Install Python version 3.11:
 - [download](https://www.python.org/downloads/) 
      
