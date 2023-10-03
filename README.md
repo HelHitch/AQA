@@ -24,12 +24,12 @@
 
 
 ## Make Allure report:
-    PowerShell for project directory:
+    For first launch:
     - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
     - irm get.scoop.sh | iex
-    IDE Concole:
-    - pytest --alluredir=/path/to/allure_results 
-    - allure serve /path/to/my_allure_reports
+    Getting report:
+    - pytest --alluredir=report
+    - allure serve report
     
     
     
