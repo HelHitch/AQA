@@ -1,6 +1,5 @@
 /venv/
-/.pytest_cache/
-.pytest_cache
+.pytest_cache/
 /__pycache__/
 /.pytest_cache
-.idea
+.idea/
