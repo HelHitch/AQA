@@ -6,16 +6,15 @@
 ## Clone project:
      git clone https://github.com/HelHitch/AQA.git
 
-## Install Python packages:
-###  Install requirements to run tests:
-     pip install -r requirements.txt --no-cache-dir
-
 ## Install Java packages, add PATH variable to java:  
 - [download](https://learn.microsoft.com/en-us/java/openjdk/download)
-
      
 ## Initialize venv:
      python3 -m venv venv
+
+## Install Python packages:
+###  Install requirements to run tests:
+     pip install -r requirements.txt --no-cache-dir
 
 ## Run tests locally (from directory tests):
      pytest -m [marker] --browser [browser name] --headless [parameter]
