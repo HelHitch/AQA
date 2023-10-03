@@ -43,7 +43,6 @@ def init_parameters(browser, headless):
 						driver = webdriver.Firefox(service = FirefoxService(GeckoDriverManager().install()))
 
 		yield driver
-		subprocess.run(["allure serve report"] , shell = True)
 		driver.close()
 		driver.quit()
 
