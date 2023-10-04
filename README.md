@@ -1,4 +1,4 @@
-# AQA
+# — Set up instruction —
 
 ## Install Chrome and Firefox:
 - [Chrome](https://www.google.com/intl/ru_ru/chrome/)
