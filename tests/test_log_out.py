@@ -3,6 +3,7 @@ import pytest
 from selenium.common import TimeoutException
 from Pages.catalog import CatalogPage
 from Pages.sidebar import SideBar
+from Pages.log_in import LoginPage
 
 
 @pytest.mark.auth
