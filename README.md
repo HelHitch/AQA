@@ -10,6 +10,9 @@
 ## Clone project:
      git clone https://github.com/HelHitch/AQA.git
 
+## Navigate to master branch(if not at that branch):
+     git checkout master
+     
 ## Install Java packages, add PATH variable to java:  
 - [download](https://learn.microsoft.com/en-us/java/openjdk/download)
      
