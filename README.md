@@ -21,11 +21,17 @@
      pip install -r requirements.txt --no-cache-dir
 
 ## Run tests locally (from directory tests):
-     pytest -m [marker] --browser [browser name] --headless [parameter]
- -m = tests matkers. Read markers description in pytest.ini  
- --browser = browser configuration.  By deafult = "chrome". Read possible parameters in coftest.pe file.
- --headless = test run configuration. By default = true. Change parameters in pytest.ini file.
-
+     pytest -m [marker] --browser [browser name] --headless [parameter] --alluredir=report
+     
+     -m = tests matkers. Read markers description in pytest.ini.
+     --browser = browser configuration.  By deafult = "chrome". Read possible parameters in coftest.pe file.
+     --headless = test run configuration. By default = true. Change parameters in pytest.ini file.
+     --alluredir = allure report result.
+### COMMAND EXAMPLE:  
+pytest -> Run tests session in headless mode in chrome  
+pytest --headless false -> Run tests session in chrome with browser opening  
+pytest --browser firefox -> Run tests session in headless mode in firefox   
+etc.  
 
 ## Make Allure report:
   1) [Download](https://github.com/allure-framework/allure2/releases) allure
