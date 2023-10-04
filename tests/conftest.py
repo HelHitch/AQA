@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 # -- coding: utf-8 --
-import subprocess
-import allure
 import pytest
-from pathlib import Path
 from selenium import webdriver
 from Pages.log_in import LoginPage
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
-from shutil import rmtree
+
 
 
 
