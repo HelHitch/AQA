@@ -17,7 +17,8 @@
 - [download](https://learn.microsoft.com/en-us/java/openjdk/download)
      
 ## Initialize venv:
-     python3 -m venv venv
+     1) python -m venv venv
+     2) venv\Scripts\activate
 
 ## Install Python packages:
 ###  Install requirements to run tests:
