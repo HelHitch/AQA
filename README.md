@@ -28,13 +28,17 @@
 
 
 ## Make Allure report:
-    Type below command into your IDE console after launching progect. 
-    For first launch:
-    - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
-    - irm get.scoop.sh | iex
-    Getting report:
-    - pytest --alluredir=report
-    - allure serve report
+  1) [Download](https://github.com/allure-framework/allure2/releases) allure
+  2) Add /bin folder of downloaded file into PATH
+  3) Open project in IDE and execute commands (Optional: Needed to run a remote script the first time):  
+    1) Set-ExecutionPolicy RemoteSigned -Scope CurrentUser   
+    2) irm get.scoop.sh | iex
+  4) restart IDE
+  5) set allure variable by executing command:
+       Set-alias allure [path to allure bat file in bin folder]\allure.bat  
+  6) Get report by executing command:  
+          1. pytest --alluredir=report  
+          2. allure serve report  
     
     
     
