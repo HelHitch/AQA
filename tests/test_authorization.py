@@ -1,12 +1,9 @@
-import time
-
 import pytest
 import allure
 from Pages.log_in import LoginPage
 from Pages.catalog import CatalogPage
 from TestData.auth_data import return_valid_auth_data, return_not_existing_data
-from Pages import BasePage
-from tests.conftest import init_parameters
+
 
 
 @pytest.mark.auth
