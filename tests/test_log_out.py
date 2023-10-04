@@ -1,13 +1,8 @@
-import time
-
 import allure
 import pytest
 from selenium.common import TimeoutException
-
 from Pages.catalog import CatalogPage
 from Pages.sidebar import SideBar
-from Pages.log_in import LoginPage
-from TestData.auth_data import return_valid_auth_data
 
 
 @pytest.mark.auth
